@@ -10,4 +10,10 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+    <string-array name="type_customers">
+        <item>Selecione seu tipo de acesso</item>
+        <item>Propietário</item>
+        <item>Gerente</item>
+    </string-array>
 </resources>

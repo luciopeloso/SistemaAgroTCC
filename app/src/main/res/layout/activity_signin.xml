@@ -36,17 +36,17 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="95dp"
+        android:autofillHints=""
         android:background="@color/white"
         android:hint="Digite seu primeiro nome"
-        android:minHeight="48dp"
         android:inputType="text"
+        android:minHeight="48dp"
         android:padding="8dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="VisualLintTextFieldSize"
-        android:autofillHints="" />
+        tools:ignore="VisualLintTextFieldSize" />
 
     <TextView
         android:id="@+id/text_last_name"
@@ -64,6 +64,7 @@
         android:id="@+id/edit_last_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:background="@color/white"
         android:hint="Digite seu sobrenome"
         android:inputType="text"
@@ -74,8 +75,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_last_name"
-        tools:ignore="VisualLintTextFieldSize"
-        android:autofillHints="" />
+        tools:ignore="VisualLintTextFieldSize" />
 
     <TextView
         android:id="@+id/text_email"
@@ -93,6 +93,7 @@
         android:id="@+id/edit_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:background="@color/white"
         android:hint="Digite seu Email"
         android:inputType="text"
@@ -102,8 +103,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_email"
-        tools:ignore="VisualLintTextFieldSize"
-        android:autofillHints="" />
+        tools:ignore="VisualLintTextFieldSize" />
 
     <TextView
         android:id="@+id/text_password"
@@ -115,23 +115,22 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/edit_password"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_email"
-        />
+        app:layout_constraintTop_toBottomOf="@id/edit_email" />
 
     <EditText
         android:id="@+id/edit_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:background="@color/white"
         android:hint="Digite sua senha"
+        android:inputType="textPassword"
         android:minHeight="48dp"
         android:padding="8dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_password"
-        android:autofillHints=""
-        android:inputType="textPassword"
         tools:ignore="VisualLintTextFieldSize" />
 
     <TextView
@@ -150,61 +149,42 @@
         android:id="@+id/edit_repeat_password"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:background="@color/white"
         android:hint="Digite novamente sua senha"
+        android:inputType="textPassword"
         android:minHeight="48dp"
         android:padding="8dp"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_repeat_password"
-        android:autofillHints=""
-        android:inputType="textPassword"
         tools:ignore="VisualLintTextFieldSize" />
 
     <TextView
         android:id="@+id/text_confirmation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="4dp"
         android:text="Tipo de acesso"
         android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@id/radio_group_acess"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/spinner_access_type"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edit_repeat_password" />
 
-    <RadioGroup
-        android:id="@+id/radio_group_acess"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_confirmation"
-        app:layout_constraintBottom_toTopOf="@id/button_login">
 
-        <RadioButton
-            android:id="@+id/radio_owner"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:text="Proprietário"
-            android:paddingRight="12dp"
-            android:paddingLeft="4dp"
-            android:button="@drawable/custom_button"
+    <Spinner
+        android:id="@+id/spinner_access_type"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:entries="@array/type_customers"
+        app:layout_constraintStart_toStartOf="parent"
 
-            android:textColor="@color/black" />
-
-        <RadioButton
-            android:id="@+id/radio_manager"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:paddingLeft="4dp"
-            android:text="Gerente"
-            android:button="@drawable/custom_button"
-            android:textColor="@color/black" />
-    </RadioGroup>
+        app:layout_constraintTop_toBottomOf="@id/text_confirmation" />
 
     <Button
         android:id="@+id/button_login"
